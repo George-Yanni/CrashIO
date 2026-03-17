@@ -1,0 +1,12 @@
+# AFL++ dictionary for the CrashIO Intro format.
+#
+# Dictionaries help AFL++ mutate toward "interesting" tokens faster than random byte flips.
+#
+# See: afl-fuzz -x <dictfile>
+
+header="CRIO"
+tag_name="N"
+tag_sum="S"
+tag_blob="B"
+boom="BOOM"
+crashme="CRASHME"
