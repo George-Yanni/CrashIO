@@ -15,9 +15,18 @@
 // __AFL_LOOP and associated runtime glue.
 
 #if defined(USE_AFL_PERSISTENT)
-extern "C" {
-int __AFL_LOOP(unsigned int);
-}
+// Prefer the AFL++ runtime header if present. When compiling with afl-clang-fast++,
+// __AFL_LOOP is typically provided as a macro via injected headers.
+#if defined(__has_include)
+#  if __has_include(<afl/afl-compiler-rt.h>)
+#    include <afl/afl-compiler-rt.h>
+#  endif
+#endif
+
+// Fallback for environments where the compiler wrapper didn't define __AFL_LOOP.
+#ifndef __AFL_LOOP
+extern "C" int __AFL_LOOP(unsigned int);
+#endif
 #endif
 
 static std::vector<std::uint8_t> read_all_stdin() {
