@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/yanni/Desktop/CrashIO/introductory_module/build/afl",
+  "command": "/usr/local/bin/afl-clang-fast++ -I/home/yanni/Desktop/CrashIO/introductory_module/target -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/parser_lib.dir/parser_lib.cpp.o -c /home/yanni/Desktop/CrashIO/introductory_module/target/parser_lib.cpp",
+  "file": "/home/yanni/Desktop/CrashIO/introductory_module/target/parser_lib.cpp",
+  "output": "CMakeFiles/parser_lib.dir/parser_lib.cpp.o"
+},
+{
+  "directory": "/home/yanni/Desktop/CrashIO/introductory_module/build/afl",
+  "command": "/usr/local/bin/afl-clang-fast++ -I/home/yanni/Desktop/CrashIO/introductory_module/target -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/afl_harness.dir/home/yanni/Desktop/CrashIO/introductory_module/harness/afl_harness.cpp.o -c /home/yanni/Desktop/CrashIO/introductory_module/harness/afl_harness.cpp",
+  "file": "/home/yanni/Desktop/CrashIO/introductory_module/harness/afl_harness.cpp",
+  "output": "CMakeFiles/afl_harness.dir/home/yanni/Desktop/CrashIO/introductory_module/harness/afl_harness.cpp.o"
+}
+]
