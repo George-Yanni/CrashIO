@@ -274,7 +274,8 @@ EOF
 chmod +x /tmp/gcov-llvm.sh
 
 # Capture + render HTML
-lcov --gcov-tool /tmp/gcov-llvm.sh --capture --directory build/cov --output-file coverage/raw/coverage.info
+lcov --gcov-tool /tmp/gcov-llvm.sh --capture --directory build/cov \
+  --ignore-errors inconsistent --output-file coverage/raw/coverage.info
 lcov --remove coverage/raw/coverage.info "/usr/*" --output-file coverage/raw/coverage.filtered.info
 genhtml coverage/raw/coverage.filtered.info --output-directory coverage/html
 ```
