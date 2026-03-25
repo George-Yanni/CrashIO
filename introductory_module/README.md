@@ -59,6 +59,24 @@ Relevant source files:
 - `harness/afl_harness.cpp`: stdin harness; optional AFL++ persistent loop
 - `corpora/dictionaries/crio.dict`: dictionary tokens (`CRIO`, `N`, `S`, `B`, `BOOM`, `CRASHME`)
 
+## What is the harness in this module?
+
+In AFL++ terms, a **harness** is the small program that:
+
+- reads the fuzzer-controlled bytes (here: from **stdin**)
+- passes them into the code you want to test (here: the parser library)
+
+In this module:
+
+- **AFL++ executes** the harness binary: `build/afl/afl_harness` (or `build/afl_persist/afl_harness`)
+- **The harness calls into** the real target code: `crashio::intro::parse_message(...)` implemented in `target/parser_lib.cpp`
+
+So you fuzz the **harness executable**, but you are really fuzzing the **parser logic** it drives.
+
+### Persistent mode (what changes)
+
+With `-DUSE_AFL_PERSISTENT=ON`, the harness uses AFL++’s persistent loop (`__AFL_LOOP(...)`) to process many inputs in one process for higher throughput. The **target code stays the same**; only how the harness feeds inputs changes.
+
 ## Lab setup (Ubuntu)
 
 This module is designed to be reproducible on **Ubuntu 22.04/24.04**.
