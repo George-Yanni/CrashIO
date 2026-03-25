@@ -1,6 +1,6 @@
 # Introductory Module — AFL++ Hands-on Starter
 
-This module is the **hands-on “first lab”** for CrashIO. It provides a small, intentionally fragile C++ parsing target and a clean workflow for:
+This module is the **hands-on “first lab”** for CrashIO Repo. It provides a small, intentionally fragile C++ parsing target and a clean workflow for:
 
 - building an AFL++-instrumented target
 - running AFL++ in **normal** and **persistent** modes
