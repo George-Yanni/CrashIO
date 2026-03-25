@@ -1,0 +1,5 @@
+# ninja log v5
+1	255	1774439899716433885	CMakeFiles/afl_harness.dir/home/yanni/Desktop/CrashIO/introductory_module/harness/afl_harness.cpp.o	345fcfae9e87ad52
+1	298	1774439899760431428	CMakeFiles/parser_lib.dir/parser_lib.cpp.o	ee3b54e8e51bba71
+298	330	1774439899785658222	libparser_lib.a	172dfdc78a0df23c
+330	492	1774439899953433871	afl_harness	b23523423c66c052
