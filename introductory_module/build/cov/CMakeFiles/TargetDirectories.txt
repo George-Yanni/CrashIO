@@ -1,0 +1,4 @@
+/home/yanni/Desktop/CrashIO/introductory_module/build/cov/CMakeFiles/parser_lib.dir
+/home/yanni/Desktop/CrashIO/introductory_module/build/cov/CMakeFiles/afl_harness.dir
+/home/yanni/Desktop/CrashIO/introductory_module/build/cov/CMakeFiles/edit_cache.dir
+/home/yanni/Desktop/CrashIO/introductory_module/build/cov/CMakeFiles/rebuild_cache.dir

@@ -265,8 +265,16 @@ for f in corpora/in/*.bin; do
   build/cov/afl_harness < "$f" >/dev/null 2>&1 || true
 done
 
+# If you built coverage with clang/llvm, make lcov use llvm-cov's gcov mode.
+# Otherwise you may see "Incompatible GCC/GCOV version" errors.
+cat > /tmp/gcov-llvm.sh <<'EOF'
+#!/usr/bin/env bash
+exec llvm-cov gcov "$@"
+EOF
+chmod +x /tmp/gcov-llvm.sh
+
 # Capture + render HTML
-lcov --capture --directory build/cov --output-file coverage/raw/coverage.info
+lcov --gcov-tool /tmp/gcov-llvm.sh --capture --directory build/cov --output-file coverage/raw/coverage.info
 lcov --remove coverage/raw/coverage.info "/usr/*" --output-file coverage/raw/coverage.filtered.info
 genhtml coverage/raw/coverage.filtered.info --output-directory coverage/html
 ```
