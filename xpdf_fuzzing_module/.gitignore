@@ -1,0 +1,6 @@
+third_party/
+build/
+install/
+corpora/in/
+corpora/out/
+*.pdf
