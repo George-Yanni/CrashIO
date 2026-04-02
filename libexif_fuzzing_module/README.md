@@ -31,12 +31,14 @@ libexif_fuzzing_module/
 │   └── prepare_corpus.sh  # copy samples into corpora/in/
 ├── corpora/
 │   ├── in/                # AFL++ input dir (-i)
-│   └── out/               # AFL++ output (queue, crashes)
+│   ├── out/               # (generated) AFL++ output (queue, crashes)
+│   └── seed/              # optional seed set/docs
 ├── third_party/           # created by scripts; gitignored
 │   ├── libexif-libexif-0_6_14-release/
 │   ├── exif-exif-0_6_15-release/
 │   └── exif-samples-master/
 ├── install/               # install prefix (gitignored)
+├── Screenshots/           # screenshots from runs/triage
 └── README.md
 ```
 

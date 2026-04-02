@@ -1,0 +1,12 @@
+third_party/
+install/
+install_asan/
+build/
+corpora/
+*.tiff
+*.tif
+*.bmp
+*.gif
+*.pgm
+*.pbm
+*.ppm

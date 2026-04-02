@@ -17,11 +17,14 @@ The emphasis is **reproducibility** and a **modular layout** you can reuse in la
 introductory_module/
 ├── target/                # target library + build system (CMake)
 ├── harness/               # AFL++ harness (stdin, optional persistent mode)
-├── scripts/               # automation entrypoints (build/fuzz/coverage)
+├── scripts/               # automation entrypoints (seed generation, build/fuzz helpers)
 ├── corpora/
-│   ├── seed/              # generated seed corpus (scripts/gen_seeds.py)
-│   └── dictionaries/      # AFL++ dictionary tokens for structure discovery
-├── coverage/              # (generated) coverage artifacts
+│   ├── dictionaries/      # AFL++ dictionary tokens for structure discovery
+│   ├── in/                # AFL++ input corpus
+│   └── seed/              # generated seed corpus (scripts/gen_seeds.py)
+├── build/                 # (generated) build trees, e.g. afl/ afl_persist/ asan/ cov/
+├── coverage/              # (generated) lcov/gcov artifacts
+├── Screenshots/           # screenshots from runs/triage
 └── README.md
 ```
 

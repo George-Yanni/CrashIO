@@ -27,9 +27,15 @@ tcpdump_fuzzing_module/
 │   ├── seed/
 │   ├── in/                # AFL++ input corpus (created/populated by script)
 │   ├── in_min/            # minimized corpus for speed
-│   └── out/               # AFL++ findings
+│   ├── in_tiny/           # tiny corpus for very fast startup
+│   ├── out/               # AFL++ findings (single-instance runs)
+│   ├── out_parallel/      # AFL++ findings (parallel non-ASan fleet)
+│   └── out_parallel_asan/ # AFL++ findings (parallel ASan fleet)
 ├── third_party/           # downloaded sources (ignored by git)
-└── install/               # local install prefix (ignored by git)
+├── install/               # local install prefix (non-ASan)
+├── install_asan/          # local ASan install prefix (triage/ASan fuzzing)
+├── Screenshots/           # screenshots from runs/triage
+└── README.md
 ```
 
 ## Prerequisites

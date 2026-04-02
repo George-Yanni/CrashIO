@@ -29,8 +29,10 @@ xpdf_fuzzing_module/
 │   ├── seed/             # input seeds for AFL++ (-i)
 │   ├── in/               # optional: copy seeds here before a run
 │   └── out/              # AFL++ output (created when you fuzz)
+├── install/              # local install prefix for built binaries
 ├── third_party/          # created by scripts; ignored by git
 │   └── xpdf-3.02/
+├── Screeshots/           # screenshots from runs/triage (folder name in repo)
 └── README.md
 ```
 
