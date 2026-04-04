@@ -1,0 +1,30 @@
+# Dependencies and Downloads
+third_party/
+
+# Build and Install Directories
+install/
+install_asan/
+build/
+bin/
+obj/
+
+# Fuzzer Input and Output (Corpora)
+# We track corpora/seed/ but ignore dynamically populated folders
+corpora/in/
+corpora/in_min/
+corpora/in_tiny/
+corpora/out/
+corpora/out_parallel/
+corpora/out_parallel_asan/
+
+# Object files, shared libraries, and archives
+*.o
+*.lo
+*.la
+*.so
+*.a
+
+# Logs and temporary files
+*.log
+*.tmp
+.DS_Store
